@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import LyricsContainer from '../Containers/LyricsContainer';
+import LyricsContainer from '../containers/LyricsContainer';
 
-export Lyrics = (props) => {
+const Lyrics = (props) => {
 
   const artistChange = e => {
     props.setArtist(e.target.value);
@@ -26,3 +26,5 @@ export Lyrics = (props) => {
   );
 
 }
+
+export default Lyrics;

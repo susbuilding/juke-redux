@@ -4,7 +4,7 @@ import Lyrics from '../components/Lyrics';
 import { setLyrics } from '../action-creators/lyrics';
 import axios from 'axios';
 
-export default class LyricsContainer extends Component () {
+export default class LyricsContainer extends Component {
   constructor(props) {
     super();
 
@@ -42,7 +42,8 @@ export default class LyricsContainer extends Component () {
       .then(response =>{
         const setLyricsAction = setLyrics(response.data.lyric)
         store.dispatch(setLyricsAction)
-      });
+      })
+      .catch(console.error());
   }
 
   render () {
