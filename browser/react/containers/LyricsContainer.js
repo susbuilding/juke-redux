@@ -5,14 +5,13 @@ export default class LyricsContainer extends Component () {
   constructor(props) {
     super();
 
-    this.state = {
-      store.getState();
-    }
+    this.state = store.getState();
+
   }
 
   componentDidMount() {
-    this.unsubscribe = store.subscribe( (type, action) => {
-      store.setState(type, action)
+    this.unsubscribe = store.subscribe( () => {
+      this.setState(store.getState());
     })
   }
 
@@ -24,7 +23,7 @@ export default class LyricsContainer extends Component () {
 
     return(
       <h1>Hey We Did It!</h1>
-    )
+    );
 
   }
 }
