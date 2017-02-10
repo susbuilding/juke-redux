@@ -16,3 +16,4 @@ export const fetchLyrics = function (artist, song) {
       .catch(console.error);
   };
 };
+
